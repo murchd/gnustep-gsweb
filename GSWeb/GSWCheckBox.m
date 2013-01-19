@@ -113,7 +113,7 @@ static Class standardClass = Nil;
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p>",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self];
 };
 

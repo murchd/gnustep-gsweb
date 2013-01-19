@@ -287,7 +287,7 @@ extern id gcObjectsToBeVisited;
   NSString* dscr=nil;
 
   dscr=[NSString stringWithFormat:@"<%s %p - sessionID=%@ autoreleasePool=%p timeOut=%f contextArrayStack=%@",
-				 object_getClassName(self),
+				 __FILE__,
 				 (void*)self,
 				 _sessionID,
 				 (void*)_autoreleasePool,
@@ -1282,7 +1282,7 @@ Returns first element of languages or nil if languages is empty
       // We can't set the editing context if one has already been created
       [NSException raise:NSInvalidArgumentException 
                    format:@"%s Can't set a defautEditingContext when one already exists",
-                   object_getClassName(self)];
+                   __FILE__];
     }
   else
     {

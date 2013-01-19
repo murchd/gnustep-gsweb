@@ -95,7 +95,7 @@ RCS_ID("$Id$")
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p - parentBindingName=%@ negate:%d keyPath=%@>",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self,
                    _parentBindingName,
                    _negate,

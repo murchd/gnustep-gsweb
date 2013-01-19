@@ -117,7 +117,7 @@ NSString* IVarInString(const char* aType,void* aValue)
           {
             Class* pvalue=(Class*)aValue;
             return [NSString stringWithFormat:@"Class:%s",
-                             class_getName(*pvalue)];
+                             __FILE__];
           };
           break;
         case _C_SEL:

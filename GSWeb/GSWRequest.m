@@ -161,7 +161,7 @@ RCS_ID("$Id$")
 -(NSString*)description
 {
   return [NSString stringWithFormat: @"<%s %p : %@: %.1f>",
-		   object_getClassName(self),
+		   __FILE__,
 		   (void*)self,
 		   _value,
                    _quality];
@@ -609,7 +609,7 @@ RCS_ID("$Id$")
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p - method=%@, uri=%@, httpVersion=%@, headers=%@, content=%@, userInfo=%@, defaultFormValueEncoding=%u, formValueEncoding=%u, formValues=%@, uriElements=%@, cookie=%@, applicationURLPrefix=%@, requestHandlerPathArray=%@, browserLanguages=%@, requestType=%d, isUsingWebServer=%s, formValueEncodingDetectionEnabled=%s, applicationNumber=%d",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self,
                    _method,
                    _uri,

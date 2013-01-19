@@ -1419,7 +1419,7 @@ NSString* GSWGetDefaultDocRoot()
 -(NSString*)description
 {
   return (*nsString_stringWithFormatIMP)(nsStringClass,stringWithFormatSEL,@"<%s %p - searchList:\n%@\n persDomains:\n%@\n tempDomains:\n%@\n changedDomains:\n%@\n dictionaryRep:\n%@\n defaultsDatabase:\n%@\n>",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self,
                    _searchList,
                    _persDomains,

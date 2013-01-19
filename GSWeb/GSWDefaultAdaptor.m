@@ -437,7 +437,7 @@ void _queueWorkOnHandle(NSFileHandle* handle, NSMutableArray* waitingThreadArray
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p host: %@ port: %d adaptorHost: %@>",
-          object_getClassName(self),
+          __FILE__,
           (void*)self, 
           _host,
           _port,

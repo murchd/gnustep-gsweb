@@ -282,7 +282,7 @@ static NSString * static_tempQueryKey = nil;
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p>",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self];
 };
 

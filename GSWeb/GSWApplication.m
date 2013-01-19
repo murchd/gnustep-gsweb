@@ -437,7 +437,7 @@ int GSWApplicationMain(NSString* applicationClassName,
   [self lock];
   dscr=[NSString stringWithFormat:
                    @"<%s %p - name=%@ adaptors=%@ sessionStore=%@ pageCacheSize=%d permanentPageCacheSize=%d pageRecreationEnabled=%s pageRefreshOnBacktrackEnabled=%s componentDefinitionCache=%@ caching=%s terminating=%s timeOut=%f dynamicLoadingEnabled=%s>",
-                 object_getClassName(self),
+                 __FILE__,
                  (void*)self,
                  [self name],
                  [[self adaptors] description],
@@ -1655,7 +1655,7 @@ to another instance **/
       // We can't set the editing context if one has already been created
       [NSException raise:NSInvalidArgumentException 
                    format:@"%s Can't set a sessionStore when one already exists",
-                   object_getClassName(self)];
+                   __FILE__];
     }
   else
     {

@@ -237,7 +237,7 @@ NSMutableDictionary   *globalPathCache = nil;
   NS_DURING
     {
       dscr=[NSString stringWithFormat:@"<%s %p - _frameworkProjectBundlesCache:%p _appURLs:%@ _frameworkURLs:%@ _appPaths:%@ _frameworkPaths:%@ _urlValuedElementsData:%@ _frameworkClassPaths:%@>",
-                     object_getClassName(self),
+                     __FILE__,
                      (void*)self,
                      (void*)_frameworkProjectBundlesCache,
                      _appURLs,

@@ -41,8 +41,8 @@
 #if defined(Netscape)
 #include <frame/log.h>
 #elif defined(Apache)
-#include <httpd.h>
-#include <http_log.h>
+#include <apache2/httpd.h>
+#include <apache2/http_log.h>
 #endif
 
 #include "config.h"

@@ -547,7 +547,7 @@ RCS_ID("$Id$")
 - (NSString*) description
 {
 
-  NSString * desStr = [NSString stringWithFormat:@"<%s %p sessionOrderedTimeOuts:%@ sessionTimeOuts:%@ target:XX callback:%@ timer:%@ selfLock:%@>", object_getClassName(self),
+  NSString * desStr = [NSString stringWithFormat:@"<%s %p sessionOrderedTimeOuts:%@ sessionTimeOuts:%@ target:XX callback:%@ timer:%@ selfLock:%@>", __FILE__,
                                                              (void*)self,
                                                              _sessionOrderedTimeOuts,
                                                              _sessionTimeOuts, 

@@ -57,7 +57,7 @@ RCS_ID("$Id$")
 -(id)description
 {
   return [NSString stringWithFormat:@"<%s: %p sessions=%@ manager=%@>",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self,
                    _sessions,
                    _timeOutManager];

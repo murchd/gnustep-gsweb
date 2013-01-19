@@ -31,6 +31,10 @@
 
 #ifndef _GSWMessage_h__
 	#define _GSWMessage_h__
+#import <objc/objc-class.h> 
+#if __OBJC2__
+#include <objc/runtime.h>
+#endif
 
 @class GSWMessage;
 @class GSWCookie;

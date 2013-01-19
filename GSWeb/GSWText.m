@@ -65,7 +65,7 @@ RCS_ID("$Id$")
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p>",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self];
 };
 

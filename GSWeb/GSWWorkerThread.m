@@ -232,7 +232,7 @@ static NSString *REQUEST_ID = @"x-webobjects-request-id";
 - (NSString*) description
 {
   return [NSString stringWithFormat:@"<%s %p socket:%@ >",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self, _serverSocket];
 }
 

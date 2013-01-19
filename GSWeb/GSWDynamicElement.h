@@ -34,6 +34,10 @@
 
 #import "GSWElement.h"
 
+#if __OBJC2__
+#include <objc/runtime.h>
+#endif
+
 GSWEB_EXPORT SEL evaluateConditionInContextSEL;
 
 //====================================================================
@@ -58,8 +62,7 @@ static inline
 BOOL GSWDynamicElement_evaluateValueInContext(GSWDynamicElement* element,Class standardClass,
                                               GSWIMP_BOOL imp,GSWAssociation* condition,GSWContext* context)
 {
-  // was object_get_class
-  if (imp && object_getClass(element)==standardClass)
+if (imp && ([element class]==standardClass)) 
     {
       return (*imp)(element,evaluateConditionInContextSEL,
                     condition,context);

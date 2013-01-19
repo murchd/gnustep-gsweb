@@ -21,6 +21,7 @@
 #   You should have received a copy of the GNU Library General Public
 #   License along with this library; if not, write to the Free
 #   Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+GNUSTEP_MAKEFILES=/usr/share/GNUstep/Makefiles
 
 ifeq ($(GNUSTEP_MAKEFILES),)
  GNUSTEP_MAKEFILES := $(shell gnustep-config --variable=GNUSTEP_MAKEFILES 2>/dev/null)
@@ -57,6 +58,5 @@ SUBPROJECTS = GSWeb \
 -include Makefile.preamble
 
 include $(GNUSTEP_MAKEFILES)/aggregate.make
-
 -include Makefile.postamble
-
+include ${GNUSTEP_MAKEFILES}/tool.make

@@ -82,7 +82,7 @@ RCS_ID("$Id$")
 {
   NSString* descr=nil;
   descr=[NSString stringWithFormat:@"<%s %p - ",
-                  object_getClassName(self),
+                  __FILE__,
                   (void*)self];
   descr=[descr stringByAppendingFormat:@"bundlePath:%@ ",
                _bundlePath];

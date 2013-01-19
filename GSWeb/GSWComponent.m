@@ -40,6 +40,9 @@ RCS_ID("$Id$")
 #include "WOKeyValueUnarchiver.h"
 #include <GNUstepBase/NSObject+GNUstepBase.h>
 #include <GNUstepBase/NSString+GNUstepBase.h>
+#if __OBJC2__
+#include <objc/runtime.h>
+#endif
 
 //====================================================================
 @implementation GSWComponent
@@ -85,9 +88,9 @@ static Class GSWHTMLBareStringClass = Nil;
     if (myClass == ([GSWComponent class])) {
       ASSIGN(_name, [aContext _componentName]);
     } else {
-      ASSIGN(_name, [NSString stringWithCString:object_getClassName(self)]);
+      ASSIGN(_name, [NSString stringWithCString:__FILE__]);
     }
-    ASSIGN(_templateName,[NSString stringWithCString:class_getName(myClass)]);
+    ASSIGN(_templateName,[NSString stringWithCString:__FILE__]);
     _isPage = NO;
     _subComponents = nil;
     [self setCachingEnabled:[GSWApp isCachingEnabled]];
@@ -292,7 +295,7 @@ static Class GSWHTMLBareStringClass = Nil;
   NSString* dscr=nil;
 
   dscr=[NSString stringWithFormat:@"<%s %p>",
-				  object_getClassName(self),
+				  __FILE__,
 				  (void*)self];
 
   return dscr;

@@ -74,7 +74,7 @@ RCS_ID("$Id$")
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p - sessionID=%@ timeOutTime=%@ lastAccessTime=%@ timeOut=%ld isCheckedOut=%s",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self,
                    _sessionID,
                    [self timeOutTimeDate],

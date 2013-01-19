@@ -414,7 +414,7 @@ GSWEB_EXPORT BOOL GSWContext_isSenderIDSearchOver(GSWContext* aContext)
   dontTraceComponentActionURL++;
   desc= [NSString stringWithFormat:
                     @"%s: %p contextID=%@ senderID=%@ elementID=%@ session=%p request=%p response=%p pageElement=%p pageComponent=%p currentComponent=%p url=%@ urlApplicationNumber=%d isClientComponentRequest=%s distributionEnabled=%s isSessionDisabled=%s pageChanged=%s pageReplaced=%s",
-                  object_getClassName(self),
+                  __FILE__,
                   (void*)self,
                   [self contextID],
                   [self senderID],

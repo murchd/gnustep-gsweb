@@ -164,7 +164,7 @@ static Class NSStringClass = Nil;
 -(id) description
 {
   return [NSString stringWithFormat:@"<%s %p action: %@ actionClass: %@ directActionName: %@ href:%@ string:%@   queryDictionary: %@ otherQueryAssociations: %@ pageName: %@ fragmentIdentifier:%@ disabled:%@ secure:%@ >",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self, _action, _actionClass, _directActionName, _href,
                    _string,
                    _queryDictionary, _otherQueryAssociations, _pageName,

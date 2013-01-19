@@ -101,7 +101,7 @@ RCS_ID("$Id$")
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p - responsePage Name=%@ contextID=%@ senderID=%@>",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self,
                    [_responsePage name],
                    _contextID,

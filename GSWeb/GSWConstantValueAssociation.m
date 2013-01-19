@@ -66,7 +66,7 @@ RCS_ID("$Id$")
 -(NSString*)debugDescription
 {
   NSString* dscr=[NSString stringWithFormat:@"<%s %p - value=%@ (class: %@)>",
-                           object_getClassName(self),
+                           __FILE__,
                            (void*)self,
                            _value,
                            [_value class]];
@@ -106,7 +106,7 @@ RCS_ID("$Id$")
   NSString* dscr=nil;
 
   dscr=[NSString stringWithFormat:@"<%s %p - value=%@ (class: %@)>",
-                 object_getClassName(self),
+                 __FILE__,
                  (void*)self,
                  _value,
                  [_value class]];

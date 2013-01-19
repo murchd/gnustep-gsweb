@@ -45,10 +45,10 @@
 #include "GSWHTTPResponse.h"
 #include "GSWAppRequest.h"
 
-#include "httpd.h"
-#include <http_config.h>
-#include <http_request.h>
-#include <http_core.h>
+#include <apache2/httpd.h>
+#include <apache2/http_config.h>
+#include <apache2/http_request.h>
+#include <apache2/http_core.h>
 
 #include <http_protocol.h>
 

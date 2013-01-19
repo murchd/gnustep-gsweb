@@ -38,8 +38,8 @@ extern "C" {
 #endif
 
 #if	defined(Apache)
-#include "httpd.h"
-#include "http_log.h"
+#include "apache2/httpd.h"
+#include "apache2/http_log.h"
 //#define APLOG_EMERG     LOG_EMERG     /* system is unusable */
 //#define APLOG_ALERT     LOG_ALERT     /* action must be taken immediately */
 #define GSW_CRITICAL 	APLOG_CRIT      /* critical conditions */

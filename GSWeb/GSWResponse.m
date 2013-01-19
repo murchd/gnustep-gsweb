@@ -225,7 +225,7 @@ void GSWResponse_appendTagAttributeValueEscapingHTMLAttributeValue(GSWResponse* 
   NSString* description=nil;
   description=[NSString stringWithFormat:
                           @"<%s %p - httpVersion=%@ status=%d headers=%p contentFaults=%p contentData=%p contentEncoding=%d userInfo=%p>",
-                        object_getClassName(self),
+                        __FILE__,
                         (void*)self,
                         _httpVersion,
                         _status,

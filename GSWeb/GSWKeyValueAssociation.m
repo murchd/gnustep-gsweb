@@ -131,7 +131,7 @@ RCS_ID("$Id$")
   NSString* dscr=nil;
 
   dscr=[NSString stringWithFormat:@"<%s %p -",
-                 object_getClassName(self),
+                 __FILE__,
                  (void*)self];
   dscr=[dscr stringByAppendingFormat:@" keyPath=%@>",
              _keyPath];

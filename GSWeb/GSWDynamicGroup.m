@@ -242,7 +242,7 @@ static Class GSWHTMLBareStringClass = Nil;
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p children:%@>",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self,
                    _children];
 };

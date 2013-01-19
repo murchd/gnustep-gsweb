@@ -98,7 +98,7 @@ static Class standardClass = Nil;
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p condition: %@ negate: %@>",
-				   object_getClassName(self),
+				   __FILE__,
 				   (void*)self, _condition, _negate];
 };
 

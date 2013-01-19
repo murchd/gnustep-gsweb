@@ -221,7 +221,7 @@ static GSWContext *   TheTemporaryContext;
 {
   //TODO
   return [NSString stringWithFormat:@"<%s %p - name:[%@] frameworkName=[%@] componentClass=[%@] isCachingEnabled=[%s] isAwake=[%s]>",
-				   object_getClassName(self),
+				   __FILE__,
 				   (void*)self,
 				   _name,
 				   _frameworkName,

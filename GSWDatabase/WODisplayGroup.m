@@ -188,7 +188,7 @@ static BOOL globalDefaultForValidatesChangesImmediately = NO;
 {
   NSString* dscr=nil;
   dscr=[NSString stringWithFormat:@"<%s %p - \n",
-        object_getClassName(self),
+        __FILE__,
         (void*)self];
   
   dscr=[dscr stringByAppendingFormat:@"numberOfObjectsPerBatch:[%d]\n",

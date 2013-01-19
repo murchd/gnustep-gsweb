@@ -153,7 +153,7 @@ static SEL valueInComponentSEL = NULL;
 -(id) description
 {
   return [NSString stringWithFormat:@"<%s %p list:%@ item:%@ string:%@ selections:%@ selectedValue:%@ NoSelectionString:%@ >",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self, 
                    _list, _item, _string, _selection, _selectedValue, _noSelectionString];
 };

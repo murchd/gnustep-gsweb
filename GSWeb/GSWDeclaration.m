@@ -118,7 +118,7 @@ return self;
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p name:[%@] type:[%@] associations:\n%@",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self,
                    _name,
                    _type,

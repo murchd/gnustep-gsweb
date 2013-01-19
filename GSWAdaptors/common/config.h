@@ -30,9 +30,7 @@
 extern "C" {
 #endif //_cplusplus
 
-#if defined(Apache2)
 #define Apache
-#endif
 
 #define CONST const
 #define DEBUG

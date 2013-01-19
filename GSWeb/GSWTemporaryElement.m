@@ -35,7 +35,9 @@
 RCS_ID("$Id$")
 
 #include "GSWeb.h"
-
+#if __OBJC2__
+#include <objc/runtime.h>
+#endif
 //====================================================================
 @implementation GSWTemporaryElement
 
@@ -86,7 +88,7 @@ RCS_ID("$Id$")
 -(NSString*)description
 {
   return [NSString stringWithFormat:@"<%s %p: properties=%@ parent=%p children count=%d templateInfo=%@>",
-                   object_getClassName(self),
+                   __FILE__,
                    (void*)self,
                    _properties,
                    _parent,
