@@ -1,0 +1,14 @@
+Index: GSWeb/GSWDynamicElement.h 
+=================================================================== 
+--- GSWeb/GSWDynamicElement.h	(revision 34917) 
++++ GSWeb/GSWDynamicElement.h	(working copy) 
+@@ -58,8 +58,7 @@ 
+BOOL GSWDynamicElement_evaluateValueInContext(GSWDynamicElement* element,Class standardClass, 
+GSWIMP_BOOL imp,GSWAssociation* condition,GSWContext* context) 
+{ 
+- // was object_get_class 
+- if (imp && object_getClass(element)==standardClass) 
++ if (imp && ([element class]==standardClass)) 
+{ 
+return (*imp)(element,evaluateConditionInContextSEL, 
+condition,context); 
