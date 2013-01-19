@@ -1,0 +1,42 @@
+Index: GSWeb/GSWDynamicElement.h
+===================================================================
+--- GSWeb/GSWDynamicElement.h	(revision 34917)
++++ GSWeb/GSWDynamicElement.h	(working copy)
+@@ -33,6 +33,9 @@
+ 	#define _GSWDynamicElement_h__
+ 
+ #import "GSWElement.h"
++#if __OBJC2__
++#include <objc/runtime.h>
++#endif
+ 
+ GSWEB_EXPORT SEL evaluateConditionInContextSEL;
+ 
+Index: GSWeb/GSWMessage.m
+===================================================================
+--- GSWeb/GSWMessage.m	(revision 34917)
++++ GSWeb/GSWMessage.m	(working copy)
+@@ -36,6 +36,9 @@
+ #include "GSWeb.h"
+ #include "NSData+Compress.h"
+ #include <GNUstepBase/NSObject+GNUstepBase.h>
++#if __OBJC2__
++#include <objc/runtime.h>
++#endif
+ 
+ 
+ static NSStringEncoding globalDefaultEncoding=GSUndefinedEncoding;
+Index: GSWeb/GSWComponent.m
+===================================================================
+--- GSWeb/GSWComponent.m	(revision 34917)
++++ GSWeb/GSWComponent.m	(working copy)
+@@ -40,6 +40,9 @@
+ #include "WOKeyValueUnarchiver.h"
+ #include <GNUstepBase/NSObject+GNUstepBase.h>
+ #include <GNUstepBase/NSString+GNUstepBase.h>
++#if __OBJC2__
++#include <objc/runtime.h>
++#endif
+ 
+ //====================================================================
+ @implementation GSWComponent
